@@ -1,0 +1,371 @@
+<html>
+    <head>
+        <title>Survey Form</title>
+       
+        <style>
+        body{
+            background:rgb(96, 233, 219);
+            align-content: center;
+        }
+        #main{
+            background:  hsl(177, 70%, 30%);
+            height: 28%;
+            margin: 0% 25% 0% 25%;  
+            border-radius: 25px;
+            border: 1px solid hsl(177, 62%, 60%);
+        }
+        #upper-corner{
+            background-image: url("Study-area.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100%;
+            border-radius: 15px;
+        }
+        #bag{
+            width: 5%;
+            position: absolute;
+            top: 14%;
+            left: 28%;
+            max-width: 100%;
+            display: block;
+            height: auto;   
+        }
+        #title{
+            height: 80px;
+            margin: 2% 0% 0% 0%;
+            color: turquoise;
+            background: white;
+            text-align: center;
+            border-radius: 15px;
+            border: 1px solid hsl(177, 62%, 60%);
+            border-top: 15px solid hsl(177, 70%, 30%); 
+        }
+        #title h1{
+            letter-spacing: 5px;
+            word-spacing: 15px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #description{
+            background: white;
+            text-align: justify;
+            padding: 5px 15px 5px 15px;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: hsl(177, 70%, 30%);
+        }
+        #des-top{
+            background: hsl(177, 70%, 30%);
+            height: 35px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 2% 0% 0% 0%;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            letter-spacing: 5px;
+            word-spacing: 15px;
+            padding-top: 15px;
+            padding-left: 5%;
+        }
+        #name-div{
+            background: white;
+            height: 90px;
+            margin: 2% 0% 0% 0%;
+            font-family: Arial, Helvetica, sans-serif;
+            padding-left: 3%;
+            padding-top: 3%;
+            color: hsl(177, 70%, 30%);
+            font-size: 18px;
+            border-radius: 15px;
+        }
+        #name{
+            height: 35px;
+            border: 1px solid turquoise;
+            border-top: transparent;
+            border-left: transparent;
+            border-right: transparent;
+            width: 96%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            letter-spacing: 2px;
+            word-spacing: 5px;
+            color: hsl(177, 70%, 30%);
+        }
+
+        #email-div{
+            background: white;
+            height: 90px;
+            margin: 2% 0% 0% 0%;
+            font-family: Arial, Helvetica, sans-serif;
+            padding-left: 3%;
+            padding-top: 3%;
+            color: hsl(177, 70%, 30%);
+            font-size: 18px;
+            border-radius: 15px;
+        }
+        #email{
+            height: 35px;
+            border: 1px solid turquoise;
+            border-top: transparent;
+            border-left: transparent;
+            border-right: transparent;
+            width: 96%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            letter-spacing: 2px;
+            word-spacing: 5px;
+            color: hsl(177, 70%, 30%);
+        }
+
+        #number-div{
+            background: white;
+            height: 90px;
+            margin: 2% 0% 0% 0%;
+            font-family: Arial, Helvetica, sans-serif;
+            padding-left: 3%;
+            padding-top: 3%;
+            color: hsl(177, 70%, 30%);
+            font-size: 18px;
+            border-radius: 15px;
+        }
+        #number{
+            height: 35px;
+            border: 1px solid turquoise;
+            border-top: transparent;
+            border-left: transparent;
+            border-right: transparent;
+            width: 96%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            letter-spacing: 2px;
+            word-spacing: 5px;
+            color: hsl(177, 70%, 30%);
+        }
+        #dropdown-div{
+            background: white;
+            height: 90px;
+            margin: 2% 0% 0% 0%;
+            font-family: Arial, Helvetica, sans-serif;
+            padding-left: 3%;
+            padding-top: 3%;
+            color: hsl(177, 70%, 30%);
+            font-size: 18px;
+            border-radius: 15px;
+        }
+        #dropdown{
+            height: 35px;
+            border: 1px solid turquoise;
+            border-radius: 20px;
+            width: 96%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            letter-spacing: 2px;
+            word-spacing: 5px;
+            color: hsl(177, 70%, 30%);
+        }
+        #radio-div{
+            background: white;
+            height: 178px;
+            margin: 2% 0% 0% 0%;
+            font-family: Arial, Helvetica, sans-serif;
+            padding-left: 3%;
+            padding-top: 3%;
+            color: hsl(177, 70%, 30%);
+            font-size: 18px;
+            border-radius: 15px;
+        }
+        #radio-div label{
+           letter-spacing: 2px;
+           font-family: Arial, Helvetica, sans-serif;
+           word-spacing: 5px;
+           font-size: 15px;
+        }
+        #radio-div input[type="radio"]{
+            width: 18px;
+            height: 18px;
+        }
+        #checkbox-div{
+            background: white;
+            height: 178px;
+            margin: 2% 0% 0% 0%;
+            font-family: Arial, Helvetica, sans-serif;
+            padding-left: 3%;
+            padding-top: 3%;
+            color: hsl(177, 70%, 30%);
+            font-size: 18px;
+            border-radius: 15px;
+        }
+        #checkbox-div label{
+           letter-spacing: 2px;
+           font-family: Arial, Helvetica, sans-serif;
+           word-spacing: 5px;
+           font-size: 15px;
+        }
+        #checkbox-div input[type="checkbox"]{
+            width: 18px;
+            height: 18px;
+        }
+
+        #comment-div{
+            background: white;
+            height: 170px;
+            margin: 2% 0% 0% 0%;
+            font-family: Arial, Helvetica, sans-serif;
+            padding-left: 3%;
+            padding-top: 3%;
+            color: hsl(177, 70%, 30%);
+            font-size: 18px;
+            border-radius: 15px;
+        }
+        #comment{
+            height: 100px;
+            border: 1px solid turquoise;
+            width: 96%;
+            border-radius: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            letter-spacing: 2px;
+            word-spacing: 5px;
+            color: hsl(177, 70%, 30%);
+            background: rgb(226, 243, 241);
+        }
+        #button-div button{
+            background: hsl(177, 70%, 30%);
+            margin: auto;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 5px 15px 5px 15px;
+            color: white;
+            border-radius: 25px;
+            font-size: 18px;
+            border: 2px solid white;
+            text-align: center;
+            letter-spacing: 2px;
+            margin-bottom: 10%; 
+            width: 100%;   
+        }
+        #button-div button:hover{
+            background: white;
+            color: hsl(177, 70%, 30%);
+            border: 2px solid hsl(177, 70%, 30%);
+        }
+        #button-div{
+            text-align: center;
+            margin-top: 5%;
+        }
+        </style>
+
+    </head>
+
+    <body>
+        <main id="main">
+            <div id="upper-corner">
+                <img src = "bag.png" id= "bag"><br>
+            </div>
+
+            <div id="title">
+                <h1>IT Personal Survey Form</h1>
+            </div>
+
+            <div id="des-top"><strong>IT Personal Survey Form</strong></div>
+            <div id="description">
+                <p><strong>Description:</strong> This is a Survey Form Project. Please provide the following information by filling-up the item/s most best describe your answer. Please specify answer where necessary.</p>
+            </div>
+
+            <div>
+                <form id="survey-form">
+
+                    <div id="name-div">
+                        <label for="name" id="name-label"><b>Name</b><br>
+                            <input id="name" type="text" placeholder="Enter name here" required>
+                        </label>
+                    </div>
+
+                    <div id="email-div">
+                        <label for="email" id="email-label"><b>Email</b><br>
+                            <input id="email" type="email" placeholder="ex. yourname@yahoo.com" required>
+                        </label>
+                    </div>
+
+                    <div id="number-div">
+                        <label for="number" id="number-label"><b>Mobile Number</b><br>
+                            <input id="number" type="number" placeholder="ex. 09xxxxxxxxx" min="11" max="11" required>
+                        </label>
+                    </div>
+
+                    <div id="dropdown-div">
+                        <label for="dropdown" id="dropdown-label"><b>Gender</b><br><br>
+                            <select id="dropdown">
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Lesbian">Lesbian</option>
+                                <option value="Gay">Gay</option>
+                                <option value="Transgender">Transgender</option>
+                                <option value="PNTS">Prefer not to say</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <div id="radio-div"><b>Choose an IT Path</b><br><br>
+                        <label for="softwaredev">
+                            <input type="radio" id="softwaredev" name="radio-labels">      Software Developer<br>
+                            <span></span>
+                        </label>
+
+                        <label for="webdev">
+                            <input type="radio" id="webdev" name="radio-labels">      Web Developer<br>
+                            <span></span>
+                        </label>
+
+                        <label for="networkarc">
+                            <input type="radio" id="networkarc" name="radio-labels">      Network Architect<br> 
+                            <span></span>
+                        </label>
+
+                        <label for="datascientist">
+                            <input type="radio" id="datascientist" name="radio-labels">      Data Scientist<br>
+                            <spn></spn>
+                        </label>
+
+                        <label for="devopseng">
+                            <input type="radio" id="devopseng" name="radio-labels">      DevOps Engineer<br>
+                            <span></span>
+                        </label>
+                    </div>
+
+                    <div id="checkbox-div"><b>Check Programming Language/s You Know</b><br><br>
+                        <label for="Python">
+                            <input type="checkbox" id="Python_checkbox" name="checkbox-labels" value="python">      Python<br>
+                        </label>
+
+                        <label for="C">
+                            <input type="checkbox" id="C_checkbox" name="checkbox-labels" value="C">      C Language<br>
+                        </label>
+
+                        <label for="JavaScript">
+                            <input type="checkbox" id="JavaScript_checkbox" name="checkbox-labels" value="JavaScript">      JavaScript<br> 
+                        </label>
+
+                        <label for="C++">
+                            <input type="checkbox" id="C++_checkbox" name="checkbox-labels" value="C++">      C++<br>
+                        </label>
+
+                        <label for="Java">
+                            <input type="checkbox" id="Java_checkbox" name="checkbox-labels" value="Java">      Java<br>
+                        </label>
+                    </div>
+
+                    <div id="comment-div">
+                        <label for="comment" id="comment_labels">Any comments/suggestions?<br><br>
+                            <textarea id="comment" name="comment-sec" placeholder="Write your comment here..."></textarea>
+                        </label>
+                    </div>
+
+                    <div id="button-div">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </body>
+</html>

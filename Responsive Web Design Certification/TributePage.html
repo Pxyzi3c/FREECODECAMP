@@ -1,0 +1,201 @@
+<html>
+    <head>
+        <title>TributePage</title>
+
+        <style>
+            #title{
+                background: transparent;
+                padding: 25px;            
+                }
+            #actual-title{
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                word-spacing: 5px;
+                letter-spacing: 5px;
+                color: black;
+                text-align: center;
+                padding-left: 25%;
+                background-color: gold;
+                padding-top: 25px;
+                padding-bottom: 15px;
+                border-top-left-radius: 35px;
+                border-right: 15px solid transparent;
+                border-bottom: 15px solid transparent;
+                border-image: linear-gradient(25deg, gold, orange);
+                border-image-slice: 1;
+            }
+            #main{
+                background-color: rgba(82, 78, 78, 0.15);
+                border-radius: 25px;
+                height: 177%;
+                margin: 0px 200px 0px 200px; 
+            }
+            #tribute-info{
+                font-family: 'Franklin Medium', 'Arial Narrow', Arial, sans-serif;
+                color: black;
+                letter-spacing: 3px;
+                word-spacing: 10px;
+                padding-left: 55px;
+                padding-right: 55px;
+            }
+            #tribute-info h3{
+                text-align: center;
+                background: transparent;
+                border-radius: 25px;
+                padding: 25px;
+                border-left:5px solid orange;
+                border-right:5px solid orange;
+            }
+            #tribute-info h3:hover{
+                animation: footer 1s forwards;
+            }
+            @keyframes footer{
+                0%{
+                    background-color: white;
+                }
+                100%{
+                    background-color:rgba(26, 24, 24, 0.295);
+                }
+            }
+            #tribute-info-sub{
+                padding-left: 55px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                height: 30%;
+                animation: Hidilyn-infos 4s forwards;
+            }
+            @keyframes Hidilyn-infos{
+                0%{
+                    padding-left: 55px;
+                    text-align: center;
+                }
+                100%{
+                    background-color:rgba(26, 24, 24, 0.295);
+                    text-align: center;
+                    color: white;
+                    border-radius: 25px;
+                }
+            }
+            #tribute-link{
+                color: orange;
+            }
+            #tribute-link:hover{
+                color: white;
+            }
+            #image{
+                position: relative;
+                width: 20%;
+                top: 200px;
+                max-width: 100%;
+                height: auto;
+                display: block;
+            }
+            #img-caption{
+                padding-left: 1%;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                padding-bottom: 3px;
+                letter-spacing: 2px;
+                word-spacing: 3px;
+                color: white;
+                padding-top: 20.5%;
+                font-size: 10px;
+            }
+            #img-div{
+                background-image: url("HD_1.png");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                margin: 0px 25px 25px 25px;
+                animation: image-background 4s infinite;
+                height: 350px;
+                border: 5px solid transparent;
+                border-image: linear-gradient(25deg, turquoise, orange);
+                border-image-slice: 1;
+            }
+            @keyframes image-background{
+               0%{
+                    background-image: url("HD_1.png");
+                    background-size: cover;
+               }
+               50%{
+                   background-image: url("HD_2.png");
+                   background-size: cover;
+               }
+               100%{
+                   background-image: url("HD_3.png");
+                   background-size: cover;
+               }
+            }
+            #orange-line{
+                height: 5px;
+                background: orange;
+                width: 40%;
+            }
+            body{
+                background: white;
+                overflow-y:scroll;
+            }
+            #flag{
+                position: absolute;
+                width: 10%;
+                top: 30px;
+                left: 20%;
+                max-width: 100%;
+                height: auto;
+                display: block;
+                animation: heart 1s infinite;
+            }
+            @keyframes heart{
+                0% {
+                    transform: scale(1);
+                }
+                50% {
+                    transform: scale(0.6);
+                }
+            }
+            #Hline{
+                position: absolute;
+                width: 5px;
+                top: 42px;
+                left: 33%;
+                max-width: 100%;
+                height: auto;
+                display: block;
+                height: 140px;
+                background: orange;
+            }
+        </style>
+    </head>
+<body>
+    <div id="main">
+        <div id="title">    
+            <div id="actual-title">
+            <img src="PH FLAG.png" id="flag">
+            <div id="Hline"></div> 
+            <h1>HIDILYN DIAZ<br><h4>The first Filipino Gold Medalist</h4></h1>
+            </div>
+        </div>
+        
+        <div id="img-div">
+            <img src = "Hidilyn Diaz 1.png" id= "image"><br>
+            <figcaption id="img-caption"><p>Hidilyn Diaz waving to the crowd</p></figcaption>
+        </div>
+
+        <div id="tribute-info">
+            <h1>About Hidilyn Diaz</h1>
+            <div id="orange-line"></div>
+            <h4 style="text-align: justify">Hidilyn Diaz is a Filipino Olympic weightlifter from Zamboanga City. Diaz won a bronze medal at the 2007 Southeast Asian Games in Thailand and finished 10th in the 53kg event at the 2006 Asian Games in Doha.</h4>
+           
+            <div id="tribute-info-sub">
+                <h4>Birthdate  : <i>February 20, 1991</i></h4>
+                <h4>Birth place: <i>Zamboanga City, Philippines</i></h4>
+                <h4>Weight     : <i>58 kg</i></h4>
+                <h4>Height     : <i>1.58 m</i></h4>
+                <h4>Rank       : <i>Military Ranks of the Philippines</i></h4>
+                <h4>Education  : <i>De La Salle-College of Saint Benilde Manila, Universidad de Zamboanga - City Campus</i></h4>
+                <h4>Parents    : <i>Eduardo Diaz Sr., Emelita Diaz</i></h4>
+            </div>
+            <br><br><h3>To know more about this phenomenal woman, click <a id="tribute-link" target="_blank" href="https://tl.wikipedia.org/wiki/Hidilyn_Diaz">this link.</a></h3>
+        <br></div>
+    </div>
+</body>
+</html>

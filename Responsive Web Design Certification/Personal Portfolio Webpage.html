@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <style>
+            body{
+                padding: 0;
+                margin: 0;
+            }
+            @media only screen and (max-width: 800px)
+            {
+                header{
+                    position: absolute;
+                    top: 0px;
+                    width: 100%;
+                    height: 2vw;
+                    padding: 25px 0px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    background-image: linear-gradient(-45deg, rgb(13, 0, 128), turquoise);
+                    z-index: 5;
+                }
+            }
+            #welcome-section{
+                background:   white;
+                height: 100vh;
+                width: 100%;
+                left: 0vw;
+                z-index: 2;
+                margin: 0;
+                text-align: center;
+                padding-top: 175px;
+                display: flex;
+                justify-content: center;
+            }
+            #welcome-texts{
+                background-image: linear-gradient(45deg, rgb(13, 0, 128), turquoise);
+                height: 400px;
+                width: 50%;
+                border-top-right-radius: 50px;
+                border-bottom-left-radius: 50px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            #welcome-texts p{
+                padding-right: 50px;
+                padding-left: 50px;
+                text-align: justify;
+                color: white;
+            }
+            #welcome-texts h1{
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 40px;
+                background: transparent;
+                margin-bottom: 0;
+                color: white;
+            }
+            #welcome-texts h2{
+                font-family: Arial, Helvetica, sans-serif;
+                background: transparent;
+                margin-top: 0;
+                color: rgb(13, 0, 128);
+                font-style: italic;
+            }
+            #welcome-pic{
+                height: 300px;
+                width: 300px;
+                background-image: linear-gradient(45deg, rgb(13, 0, 128), turquoise);
+                display: flex;
+                justify-content: center;
+                border-radius: 50%;
+            }
+            #welcome-pic img{
+                height: 270px;
+                width: 270px;
+                margin-top: 15px;
+                border-radius: 50%;
+            }
+
+            #header{
+                position: fixed;
+                background-image: linear-gradient(45deg, rgb(13, 0, 128), turquoise);
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 20px;
+                padding: 25px 0px;
+                display: flex;
+                align-items: center;
+                z-index: 5;
+            }
+            #logo{
+                background-color: none;
+                height: 60px;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                color: lime;
+                width: 30%;
+                font-family: Arial, Helvetica, sans-serif;
+                letter-spacing: 5px;
+                font-size: 18px;
+                margin-left: 10px;
+                padding: 3px 5px 3px 0px;
+            }
+            #logo h2{
+                background: none;
+                height: 40px;
+                margin-top: 4px;
+                text-align: center;
+                display: flex;
+                padding-top: 11px;
+                padding-top: 11px;
+                margin-left: 5%;
+            }
+            #navbar{
+                margin-left: 27%;
+                height: 70px;
+                background:transparent;
+                justify-content: center;
+                display: flex;
+                text-align: center;
+            }
+            .nav-link{
+                text-decoration: none;
+                color: black;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 20px;
+                letter-spacing: 2px;
+                background:transparent;
+                height: 60%;
+                padding-top: 15px;
+                width: 130px;
+                border-right: 2px solid rgba(13, 0, 128, 0.342);
+                margin-top: 5px;
+            }
+            .nav-link:hover{
+                background: lime;
+                height: 50px;
+                margin-top: 0;
+                padding-top: 20px;
+                color: white;
+            }
+
+            #pic-id{
+                background: transparent;
+                height: 350px;
+                padding-top: 50px;
+                margin-right: 5%;
+            }
+            #line-after-pic{
+                height: 400px;
+                width: 10px;
+                background: lime;
+                margin-right: 5%;
+            }
+            
+            #projects{
+                background: #003366;
+                margin-top: 0;
+                height: 595px;
+                width: 100%;
+            }
+            #projects h1{
+                color: white;
+                font-family: Arial, Helvetica, sans-serif;
+                letter-spacing: 5px;
+                font-size: 50px;
+                border-bottom: 5px solid lime;
+                width: 60%;
+                text-align: center;
+                padding-bottom: 10px;
+                margin-left: 20%;
+                padding-top: 10px;
+                word-spacing: 5px;
+            }
+            .project-tile{
+                height: 350px;
+                background:turquoise;
+                width: 230px;
+                text-align: center;
+                text-decoration: none;
+                font-family: Arial, Helvetica, sans-serif;
+                color: lime;
+                font-size: 20px;
+                letter-spacing: 2px;
+                box-shadow: 0px 10px 20px rgba(77, 131, 125, 0.541);
+                border-radius: 15px;
+            }
+            .project-tile:hover{
+                animation: projectAnim 500ms forwards;
+            }
+            @keyframes projectAnim{
+                100%{
+                    transform: scale(1.2);
+                }
+            }
+
+
+            #projectsbar{
+                background: transparent;
+                height: 360px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            
+            #profile-link{
+                margin-right: 30px;
+                display: flex;
+                flex-direction: column;
+            }
+            #profile-link img{
+                height: 290px; 
+                width: 100%;
+                background: black;
+                margin-bottom: 0;
+                border-top-right-radius: 15px;
+                border-top-left-radius: 15px;
+            }
+            #profile-link p{
+                background: #002447;
+                height: 45px;
+                margin: 0;
+                padding-top: 15px;;
+            }
+
+
+            #product-webpage{
+                margin-right: 30px;
+                display: flex;
+                flex-direction: column;
+            }
+            #product-webpage img{
+                height: 290px; 
+                width: 100%;
+                background: black;
+                margin-bottom: 0;
+                border-top-right-radius: 15px;
+                border-top-left-radius: 15px;
+            }
+            #product-webpage p{
+                background: #002447;
+                height: 55px;
+                margin: 0;
+                padding-top: 5px;
+            }
+
+
+            #survey-form{
+                margin-right: 30px;
+                display: flex;
+                flex-direction: column;
+            }
+            #survey-form img{
+                height: 290px; 
+                width: 100%;
+                background: black;
+                margin-bottom: 0;
+                border-top-right-radius: 15px;
+                border-top-left-radius: 15px;
+            }
+            #survey-form p{
+                background: #002447;
+                height: 45px;
+                margin: 0;
+                padding-top: 15px;
+            }
+
+
+            #tribute-page{
+                margin-right: 30px;
+                display: flex;
+                flex-direction: column;
+            }
+            #tribute-page img{
+                height: 290px; 
+                width: 100%;
+                background: black;
+                margin-bottom: 0;
+                border-top-right-radius: 15px;
+                border-top-left-radius: 15px;
+            }
+            #tribute-page p{
+                background: #002447;
+                height: 45px;
+                margin: 0;
+                padding-top: 15px;;
+            }
+
+
+
+            #documentation-page{
+                display: flex;
+                flex-direction: column;
+            }
+            #documentation-page img{
+                height: 290px; 
+                width: 100%;
+                background: black;
+                margin-bottom: 0;
+                border-top-right-radius: 15px;
+                border-top-left-radius: 15px;
+            }
+            #documentation-page p{
+                background: #002447;
+                height: 55px;
+                margin: 0;
+                padding-top: 5px;
+            }
+
+
+            #view-more{
+                width: 100%;
+                background: transparent;
+                height: 75px;
+                margin-top: 0;
+                display: flex;
+                justify-content: center;
+            }
+            #view-more button{
+                height: 50px;
+                margin-top: 25px;
+                width: 125px;
+                background: lime;
+                color: white;
+                font-size: 18px;
+                font-family: Arial, Helvetica, sans-serif;
+                letter-spacing: 2px;
+                word-spacing: 4px;
+                border-radius: 10px;
+                border: none; 
+            }
+            #view-more button:hover{
+                animation: buttonAnim 300ms forwards;
+            }
+            @keyframes buttonAnim{
+                100%{
+                    background: white;
+                    transform: scale(1.1);
+                    color: lime;
+                    border: 2px solid lime;
+                }
+            }
+            #skills{
+                height: 595px;
+                width: 100%;
+                background: white;
+                margin-top: 5px;
+                padding-top: 25px;
+            }
+
+
+            #skills-main{
+                height: 500px;
+                width: 50%;
+                background: white;
+                box-shadow: 0px 10px 20px rgba(77, 131, 125, 0.541);
+                border-radius: 25px;
+                margin-left: 25%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                grid-gap: 10px;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            .circle{
+                background: white;
+                height: 100px;
+                width: 100px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                margin-left: 115px;
+                box-shadow: 0px 10px 20px rgba(77, 131, 125, 0.541);
+            }
+            #skill-1{
+                display: flex;
+                padding-top: 10px;
+                flex-direction: column;
+                text-align: center;
+            }
+            #skill-2{
+                display: flex;
+                padding-top: 10px;
+                flex-direction: column;
+                text-align: center;
+            }
+            #skill-3{
+                display: flex;
+                padding-top: 10px;
+                flex-direction: column;
+                text-align: center;
+            }
+            #skill-4{
+                display: flex;
+                padding-top: 10px;
+                flex-direction: column;
+                text-align: center;
+            }
+            .icons{
+                height: 70px;
+                width: 70px;
+                margin-top:15px; 
+            }
+            #skills-main h3{
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 0;
+                padding-bottom: 10px;
+                padding-top: 10px;
+                color: turquoise;
+            }
+            #skills-main p{
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 0;
+                text-align: justify;
+                padding-left: 5px;
+                padding-right: 5px;
+                color: black;
+            }
+            #contact{
+                height: 595px;
+                width: 100%;
+                background: #003366;
+                padding-top: 0px;
+            }
+            #contact-div{
+                height: 400px;
+                background: transparent;
+                padding-top: 100px;
+                border-bottom: 2px solid lime;
+            }
+            #contact-div h1{
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-size: 70px;
+                letter-spacing: 1px;
+                word-spacing: 3px;
+                background: transparent;
+                margin: 0;
+                text-align: center;
+                color: white;
+            }
+            #contact-div h3{
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 20px;
+                letter-spacing: 2px;
+                word-spacing: 4px;
+                background: transparent;
+                margin: 0;
+                text-align: center;
+                color: lime;
+                font-style: italic;
+            }
+            #navbar-footer{
+                display: flex;
+                justify-content: center;
+                margin-top: 5%;
+            }
+            .navbar-contact{
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 30px;
+                text-decoration: none;
+                font-weight: bolder;        
+                color: turquoise;
+                padding: 5px 10px 5px 10px;
+                border-radius: 25px;    
+                border-bottom: 2px solid turquoise;
+            }
+            .navbar-contact:hover{
+                animation: mycontacts 200ms forwards;
+            }
+            @keyframes mycontacts{
+                100%{
+                    background: white;
+                    padding: 10px 20px 10px 20px;
+                    border-bottom: none;
+                }
+            }
+            #github-logo{
+                width: 30px;
+                height: 30px;
+            }
+            #fb-logo{
+                width: 30px;
+                height: 30px;
+            }
+            #email-logo{
+                width: 30px;
+                height: 30px;
+            }
+            #gmail-logo{
+                width: 30px;
+                height: 30px;
+            }
+        </style>
+    </head>
+
+
+
+    <header id="header">
+        <div id="logo">
+            <img src="my logo.png" id="logo-image">
+            <h2>HarvyPontillas</h2>
+        </div>
+
+        <nav id="navbar">
+            <a href="#welcome-section" class="nav-link">About Me</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+    </header>
+
+
+
+        <section id="welcome-section">
+            <div id="pic-id">
+                <div id="welcome-pic">
+                    <img src="mypic.jpg" alt="">
+                </div>
+            </div>
+            <div id="line-after-pic"></div>
+            <div id="welcome-texts">
+                <h1>Hi! I'm Harvy Jones Pontillas</h1>
+                <h2>Future Software Engineer</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur earum placeat doloremque quos, vel ad. Eius iusto non nemo odio ducimus in nihil tenetur nisi? Facere iusto rem sapiente aspernatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem incidunt aliquid ab aut non fugit expedita ea repudiandae, at velit officia vel natus quos eos animi rem quo sint. Ut?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea omnis dolor iste aperiam debitis nemo cupiditate sit architecto enim officia provident incidunt ratione libero consequuntur neque, aliquid eveniet, amet eos? Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus vitae perferendis, minima consequuntur harum velit ratione debitis veritatis adipisci beatae. Dolores voluptate molestias dolorem magnam eaque in ipsam eveniet quasi!</p>
+            </div>
+        </section>
+
+
+
+        <section id="projects">
+            <h1>Some of My Projects</h1>
+            <div id="projects-grid">
+                <nav id="projectsbar">
+                    <a href="https://github.com/Pxyzi3c" target="_blank" id="profile-link" class="project-tile">
+                        <img src="Github.png">
+                        <p>Github</p>
+                    </a>
+                    <a href="https://codepen.io/harveyjones/pen/XWgbXXV" target="_blank" id="product-webpage" class="project-tile">
+                        <img src="landing-page.png">
+                        <p>Product Landing Page</p>
+                    </a>
+                    <a href="https://codepen.io/harveyjones/pen/bGRdEVV" target="_blank" id="survey-form" class="project-tile">
+                        <img src="survey form.png">
+                        <p>Survey Form</p>
+                    </a>
+                    <a href="https://codepen.io/harveyjones/pen/abwOdzY" target="_blank" id="tribute-page" class="project-tile">
+                        <img src="tributepage.png">
+                        <p>Tribute Page</p>
+                    </a>
+                    <a href="https://codepen.io/harveyjones/pen/LYLVGNg" target="_blank" id="documentation-page" class="project-tile">
+                        <img src="documentationpage.png">
+                        <p>Technical Documentation Page</p>
+                    </a>
+                </nav>
+
+                <div id="view-more">
+                    <a href="#" target="_blank" id="button"><button type="button">View More</button></a>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="skills">
+            <div id="skills-main">
+                <div id="skill-1">
+                    <div class="circle">
+                        <img src="web-design-icon.png" class="icons">
+                    </div>
+                    <h3>Web Design</h3>
+                    <p>Ab ipsum eum dolorum enim sequi voluptas. Deserunt itaque nesciunt quaerat deleniti id enim omnis distinctio nam, doloribus corporis, molestiae corrupti dolore!</p>
+                </div>
+                <div id="skill-2">
+                    <div class="circle">
+                        <img src="ppt-icon.png" class="icons">
+                    </div>
+                    <h3>PowerPoint Presentation</h3>
+                    <p>Ab ipsum eum dolorum enim sequi voluptas. Deserunt itaque nesciunt quaerat deleniti id enim omnis distinctio nam, doloribus corporis, molestiae corrupti dolore!</p>
+                </div>
+                <div id="skill-3">
+                    <div class="circle">
+                        <img src="mobile-app-icon.png" class="icons">
+                    </div>
+                    <h3>Mobile App</h3>
+                    <p>Ab ipsum eum dolorum enim sequi voluptas. Deserunt itaque nesciunt quaerat deleniti id enim omnis distinctio nam, doloribus corporis, molestiae corrupti dolore!</p>
+                </div>
+                <div id="skill-4">
+                    <div class="circle">
+                        <img src="data-icon.png" class="icons">
+                    </div>
+                    <h3>Data Management</h3>
+                    <p>Ab ipsum eum dolorum enim sequi voluptas. Deserunt itaque nesciunt quaerat deleniti id enim omnis distinctio nam, doloribus corporis, molestiae corrupti dolore!</p>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="contact">
+            <div id="contact-div">
+                <h1>Let's work together...</h1>
+                <h3>How do you take your coffee?</h3>
+                <div id="navbar-footer">
+                    <a href="#" class="navbar-contact">
+                        <img src="Github-logo.png" id="github-logo">
+                        Github</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="#" class="navbar-contact">
+                        <img src="fb-logo.png" id="fb-logo">
+                        Facebook</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="#" class="navbar-contact">
+                        <img src="yahoo-logo.png" id="email-logo">
+                        Email</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="#" class="navbar-contact">
+                        <img src="gmail-logo.png" id="gmail-logo">    
+                        Gmail</a>
+                </div>
+            </div>
+            <div style="display: flex; justify-content: center; height:73px; color: white; width: 100%; font-family: Arial, Helvetica, sans-serif;padding-top: 20px;">
+                <h3>**This is just a fake portfolio. All the projects and contact details given are not real.</h3>
+                <h3 style="margin-left: 10%;" >© Created for freeCodeCamp</h3>
+            </div>
+        </section>
+</html>
