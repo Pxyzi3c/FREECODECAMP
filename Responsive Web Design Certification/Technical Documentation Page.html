@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Technical Domentation Page</title>
+
+        <style>
+            #navbar{
+                position: fixed;
+                height: 100%;
+                min-width: 250px;
+                width: 250px;
+                top: 0;
+                left: 0;
+                background-color: rgb(13, 0, 128);
+                padding-top: 0;
+            }
+            .nav-link{
+                text-decoration: none;
+                padding: 5px 0px;
+                color: white;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                letter-spacing: 1px;
+                word-spacing: 2px;
+                background: transparent;
+            }
+            .nav-link:hover{
+                color: rgb(13, 0, 128);
+                background: turquoise;
+            }
+            #navbar li{
+                list-style: none;
+            }
+            #navbar header{
+                text-align: center;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                letter-spacing: 4px;
+                word-spacing: 10px;
+                font-size: 25px;
+                width: 90%;
+                margin-left: 5%;
+                margin-right: 5%;
+                padding-bottom: 5px;
+                border-bottom: 5px solid turquoise;
+                color: white;
+            }
+            @media only screen and (max-width: 800px)
+            {
+                /*for mobile phones*/
+                #navbar {
+                    position: fixed;
+                    max-height: 300px;
+                    max-width: 250px;
+                    width: 250px;
+                    top: 0px;
+                    left: 0px;
+                    padding: 75px 0px;
+                    z-index: 1;
+                    min-height: 100%;
+                }
+            }
+            #main-doc{
+                margin-left: 260px;
+            }
+            #navbar-image img{
+                width: 250px;
+                height: 200px;
+                position: relative;
+            }
+            #navbar-image{
+                height: 190px;
+                width: 250px;
+                background:transparent;
+                padding: 0;
+            }
+            #navbar hr{
+                width: 80%;
+                margin-left: 0;
+            }
+            .main-section header{
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-size: 30px;
+                text-align: center;
+                letter-spacing: 5px;
+                word-spacing: 10px;
+                padding-bottom: 10px;
+                border-bottom: 5px solid turquoise;
+                width: 50%;
+                margin-left: 25%;
+                margin-right: 25%;
+                color: rgb(13, 0, 128);
+            }
+            .main-section{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            #adobo-image{
+                background: transparent;
+                height: 300px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                margin-top: 2%;
+            }
+            code{
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                background: lime;   
+                padding: 5px 10px 5px 10px;
+                border-radius: 5px;
+            }
+            #sinigang-image{
+                background: transparent;
+                height: 300px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                margin-top: 2%;
+            }
+            #lumpia-image{
+                background: transparent;
+                height: 300px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                margin-top: 2%;
+            }
+            #tinola-image{
+                background: transparent;
+                height: 300px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                margin-top: 2%;
+            }
+            #sisig-image{
+                background: transparent;
+                height: 300px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                margin-top: 2%;
+            }
+        </style>
+    </head>
+
+    <nav id="navbar">
+        <div id="navbar-image">
+            <img src="Filipinofood.png">
+        </div>
+        <header>Pinoy Foods</header><br>
+
+        <ul>
+            <li><a class="nav-link" href="#Adobo" style="padding-right: 47px;">Chicken Adobo</a></li><hr>
+            <li><a class="nav-link" href="#Sinigang" style="padding-right: 6px;">Sinigang na Bangus</a></li><hr>
+            <li><a class="nav-link" href="#Lumpiang_Shanghai" style="padding-right: 10px;">Lumpiang Shanghai</a></li><hr>
+            <li><a class="nav-link" href="#Tinolang_Manok" style="padding-right: 49px;">Chicken Tinola</a></li><hr>
+            <li><a class="nav-link" href="#Pork_Sisig" style="padding-right: 85px;">Pork Sisig</a></li>
+        </ul>
+    </nav>
+
+
+    <main id="main-doc">
+        <section class="main-section" id="Adobo">
+        <header>Chicken Adobo</header>
+            <div id="adobo-image">
+                <img src="Adobo.jpg">
+            </div>
+            <p>
+                <code>"Hello Adobo!"</code>
+            </p>
+            
+            <p>
+                <ul>
+                    <li>Chicken Adobo is a Filipino dish made by braising chicken legs (thighs and/or drumsticks) in a sauce made up of vinegar, soy sauce, garlic, and black pepper. It's tangy, salty, garlicy, slightly sweet, and spicy. The chicken is slowly simmered in the sauce making it flavorful and incredibly tender.</li>
+                    <li>Main Ingredients:</li>
+                        <ul>
+                            <li>Chicken</li>
+                            <li>Soy sauce</li>
+                            <li>Vinegar</li>
+                            <li>Black pepper</li>
+                        </ul>
+                </ul>
+            </p>
+            <br>
+            
+
+        <section class="main-section" id="Sinigang">
+        <header>Sinigang na Bangus</header>
+            <div id="sinigang-image">
+                <img src="Sinigang.jpg">
+            </div>
+            <p>
+                <code>"Asim Kilig!"</code>
+            </p>
+            
+            <p>
+                <ul>
+                    <li>Sinigang na Bangus is a type of sour clear broth fish soup. ... You can really enjoy the fresh taste of the fish complemented by the warm sour broth. If you are trying to learn how to cook, this dish is a perfect choice to start with.</li>
+                    <li>Main Ingredients:</li>
+                        <ul>
+                            <li>Bangus</li>
+                            <li>Siling haba</li>
+                            <li>Vinegar(or any other sour-tasting products)</li>
+                            <li>Tomato</li>
+                        </ul>
+                </ul>
+            </p>
+            <br>
+        
+
+        <section class="main-section" id="Lumpiang_Shanghai">
+        <header>Lumpiang Shanghai</header>
+            <div id="lumpia-image">
+                <img src="Lumpia.jpg">
+            </div>
+            <p>
+                <code>"Hmmm, perfection!"</code>
+            </p>
+            
+            <p>
+                <ul>
+                    <li>Lumpiang Shanghai is a Filipino-style spring roll made of ground pork, chicken or beef filling wrapped in thin crepes called lumpia wrappers. The meat-stuffed lumpia is rolled into a thin cylindrical shape, cut into bite-size lengths and deep-fried to golden perfection.</li>
+                    <li>Main Ingredients:</li>
+                        <ul>
+                            <li>Lumpia wrappers</li>
+                            <li>Ground pork</li>
+                            <li>Minced onions and carrots</li>
+                            <li>Seasonings such as salt and ground bell pepper</li>
+                        </ul>
+                </ul>
+            </p>
+            <br>
+
+        
+        <section class="main-section" id="Tinolang_Manok">
+        <header>Chicken Tinola</header>
+            <div id="tinola-image">
+                <img src="tinola.jpg">
+            </div>
+            <p>
+                <code>"Wow sabaw!"</code>
+            </p>
+            
+            <p>
+                <ul>
+                    <li>Classic Tinolang Manok is a healthy Filipino chicken soup dish with vegetables. This dish has a clear broth and includes moringa (malunggay), chayote, green papaya, hot pepper leaves, and ginger as part of the ingredients. Tinolang Manok is also known as chicken tinola.</li>
+                    <li>Main Ingredients:</li>
+                        <ul>
+                            <li>Chicken parts(mainly legs)</li>
+                            <li>Green papaya or chayote</li>
+                            <li>Hot pepper leaves</li>
+                            <li>Ginger</li>
+                        </ul>
+                </ul>
+            </p>
+            <br>
+        
+
+        <section class="main-section" id="Pork_Sisig">
+        <header>Pork Sisig</header>
+            <div id="sisig-image">
+                <img src="sisig.jpg">
+            </div>
+            <p>
+                <code>"Sisig for the win!"</code>
+            </p>
+            
+            <p>
+                <ul>
+                    <li>Sisig or Pork Sisig is a Filipino food made from minced pork. This Sisig Recipe makes use of minced pigs ears and meat (pork belly). Sisig originated in Pampanga, a place a few kilometers North of Manila. Aside from using ears and belly, the pig's face (also called mascara) is used to make sisig.</li>
+                    <li>Main Ingredients:</li>
+                        <ul>
+                            <li>Pig parts</li>
+                            <li>Onions</li>
+                            <li>Chili</li>
+                            <li>Fried egg</li>
+                        </ul>
+                </ul>
+            </p>
+            <br>     
+    </main>
+</html>

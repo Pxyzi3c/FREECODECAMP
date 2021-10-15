@@ -1,0 +1,584 @@
+<html>
+    <head>
+        <title>Product Landing Page</title>
+        <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
+        <style>
+            body{
+                margin: 0;
+            }
+            @media(max-width:500px){
+                body{
+                    flex-wrap: wrap;
+                }
+            }
+            #header{
+                height: 80px;
+                background-image: linear-gradient(45deg, rgb(13, 0, 128), turquoise);
+                width: 100%;
+                position: fixed;
+                top: 0px;
+                display: flex;
+                justify-content: inherit;
+                z-index: 5;
+            }
+            #header-img{
+                width: 3%;
+                position: absolute;
+                left: 3%;
+                top: 12px;
+            }
+            #nav-bar{
+                padding-left: 50%;
+                padding-top: 27px;
+                font-size: 18px;
+                letter-spacing: 2px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            .nav-link{
+                text-decoration: none;
+                color: white;
+            }
+            #logo p{
+                position: absolute;
+                font-family: Pacifico;
+                color: #00ff00;
+                left: 7%;
+                margin-top: 10px;
+                font-size: 30px;
+            }
+            #motto{
+                text-align: center;
+                margin-top: 10px;
+                font-size: 1.5em;
+                font-family: Pacifico;
+                color: #00ff00;
+                letter-spacing: 2px;
+                word-spacing: 5px;
+            }
+            #email{
+                height: 35px;
+                width: 400px;
+                text-decoration: none;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                letter-spacing: 2px;
+                word-spacing: 5px;
+                border: 2px solid;
+                border-image: linear-gradient(45deg, rgb(13, 0, 128), turquoise);
+                text-align: center;
+                border-image-slice: 1;
+            }
+            #email:hover{
+                border: 2px solid turquoise;
+            }
+            #form{
+                text-align: center;
+            }
+            #submit{
+                height: 35px;
+                width: 200px;
+                border-radius: 10px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                letter-spacing: 2px;
+                word-spacing: 5px;
+                color: white;
+                background: #00ff00;
+                border: none;
+                font-size: 15px;
+            }
+            #submit:hover{
+                animation:submit-anim 300ms forwards;
+            }
+            @keyframes submit-anim{
+                100%{
+                    background: #00a500;
+                }
+            }
+            #home{
+                padding-top: 6%;
+            }
+            #storylayover{
+                margin-top: 5%;
+                align-items: center;
+                display: flex;
+                float: left;
+                margin-left: 20%;
+                border-radius: 45px;
+                width: 80%; 
+                overflow:hidden;
+                height: 335px;
+                border-top-left-radius: 0%;      
+                border-top-right-radius: 0%;
+                border-bottom-right-radius: 0%;   
+                background-image: linear-gradient(-45deg, rgb(13, 0, 128), turquoise);
+            }
+            #video-description{
+                height: 335px;
+                padding-left: 50px;
+                padding-right: 50px;
+                width: 400px;
+            }
+            #video-description h1{
+                font-family: Arial, Helvetica, sans-serif;
+                color:white;
+                border-bottom: 5px solid lime;
+                padding-bottom: 10px;
+            }
+            #video-description p{
+                font-family: Arial, Helvetica, sans-serif;
+                color: white;
+            }
+            #services-container{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                background-color: none;
+                width: 100%;
+                margin-bottom: 5%;
+            }
+            #box-1{
+                height: 400px;
+                width: 300px;
+                background: white;
+                box-shadow: 0px 10px 20px rgba(77, 131, 125, 0.541);
+                margin-right: 75px;
+                border-radius: 25px;
+                display: flex;
+                flex-direction: column;
+                text-align: justify;
+            }
+            #box-buttons{
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                letter-spacing: 2px;
+                word-spacing: 5px;
+                width: 50%;
+                margin-left: 25%;
+                border: none;
+                background: lime;
+                color: white;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                margin-top: 5px;
+                border-radius: 25px;
+            }
+            #box-buttons:hover{
+                background: #00a500;
+            }
+            #box-1:hover{
+                animation: b0x-1 500ms forwards;
+            }
+            @keyframes b0x-1{
+                100%{
+                    transform: scale(1.1);
+                }
+            }
+
+            #box-2{
+                height: 400px;
+                width: 300px;
+                background: white;
+                box-shadow: 0px 10px 20px rgba(77, 131, 125, 0.541);
+                margin-right: 75px;
+                border-radius: 25px;
+                display: flex;
+                flex-direction: column;
+                text-align: justify;
+            }
+            #box-2:hover{
+                animation: b0x-2 500ms forwards;
+            }
+            @keyframes b0x-2{
+                100%{
+                    transform: scale(1.1);
+                }
+            }
+
+            #box-3{
+                height: 400px;
+                width: 300px;
+                background: white;
+                box-shadow: 0px 10px 20px rgba(77, 131, 125, 0.541);
+                border-radius: 25px;
+                display: flex;
+                flex-direction: column;
+                text-align: justify;
+            }
+            #box-3:hover{
+                animation: b0x-3 500ms forwards;
+            }
+            @keyframes b0x-3{
+                100%{
+                    transform: scale(1.1);
+                }
+            }
+
+            #box-1-top{
+                border-top-left-radius: 25px;
+                border-top-right-radius: 25px;
+                background-image: linear-gradient(45deg, rgb(13, 0, 128), turquoise);
+                height: 35px;
+                width: 100%px;
+            }
+            #box-2-top{
+                border-top-left-radius: 25px;
+                border-top-right-radius: 25px;
+                background-image: linear-gradient(45deg, rgb(13, 0, 128), turquoise);
+                height: 35px;
+                width: 100%px;
+            }
+            #box-3-top{
+                border-top-left-radius: 25px;
+                border-top-right-radius: 25px;
+                background-image: linear-gradient(45deg, rgb(13, 0, 128), turquoise);
+                height: 35px;
+                width: 100%px;
+            }
+            
+            #seeMoreButton{
+                width: 100px;
+                height: 50px;
+                margin-top: 13%;
+                border: 2px solid lime;
+                border-top-right-radius: 25px;
+                border-bottom-right-radius: 25px;
+                background: white;
+                color: lime;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                margin-left: 45px;
+                box-shadow: 5px 5px 15px rgba(77, 131, 125, 0.541);
+            }
+            #seeMoreButton:hover{
+                animation: b0x-4-button 500ms forwards;
+                color: white;
+                background: lime;
+            }
+            @keyframes b0x-4-button{
+                100%{
+                    margin-left: 75px;
+                }
+            }
+            #services-upper{
+                background: transparent;
+                height: 130px;
+                width: 80%;
+                margin-top: 33%;
+                text-align: center; 
+                padding-top: 0;   
+                padding-left: 10%;
+                padding-right: 10%;            
+            }
+            #services-upper h1{
+                color: turquoise;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                letter-spacing: 5px;
+                border-bottom: 2px solid lime;
+            }
+            #services-upper p{
+                letter-spacing: 2px;
+                word-spacing: 5px;
+                font-family: Arial, Helvetica, sans-serif;
+                color: rgb(13, 0, 128);
+                text-align: justify;
+            }
+            #about-us-container{
+                width: 93%;
+                height: 700px;
+                margin-left: 50px;
+                margin-right: 50px;
+                background-image: linear-gradient(45deg, rgb(13, 0, 128), turquoise);
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 5%;
+            }
+            #companyPic{
+                background-image: url("https://i.pinimg.com/564x/ef/f2/65/eff2656efb895286c00bf452d9e9c117.jpg");
+                height: 700px;
+                width: 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                opacity: 20%;
+            }
+            #titleAboutus{
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                color: white;
+                font-size: 20px;
+                letter-spacing: 8px;
+                word-spacing: 20px;
+                position: absolute;
+                box-align: center;
+                margin-left: 29%;
+                width: 35%;
+                text-align: center;
+                border-bottom: 3px solid turquoise;
+            }
+            #infoAboutus{
+                background:transparent;
+                width: 45%;
+                position: absolute;
+                margin-top: 10%;
+                margin-left: 5%;
+                font-family: Arial, Helvetica, sans-serif;
+                color: white;
+                text-align: justify;
+            }
+            #infoAboutus h2{
+                text-transform: uppercase;
+            }
+            #infoAboutus p{
+                font-size: 15px;
+                text-align: justify;
+                margin: 0 10px 0 10px;
+                color: white;
+                letter-spacing: 2px;
+                word-spacing: 5px;
+            }
+            #manPic{
+                width: 93%;
+                position: absolute;
+                background: transparent;
+                height: 700px;
+                justify-content: center;
+            }
+            #manPic img{
+                width: 300px;
+                height: 355px;
+                margin-top: 5%;
+                margin-left: 65%;
+                animation: mAnpix 2s forwards infinite;
+            }
+            @keyframes mAnpix{
+                50%{
+                    transform: scale(1.2);
+                }
+                100%{
+                    transform: scale(1);
+                }
+            }
+            #aboutUsFlexBoxes{
+                height: 280px;
+                background: transparent;
+                width: 93%;
+                margin-top: 30%;
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                padding-top: 10px;
+            }
+            #AboutUs-box1{
+                width: 200px;
+                height: 90%;
+                background: rgba(255, 255, 255, 0.041);
+                margin-right: 5%;
+                border-radius: 15px;
+                box-shadow: 0px 10px 20px rgba(25, 1, 112, 0.541);
+            }
+            #AboutUs-box2{
+                width: 200px;
+                height: 90%;
+                background: rgba(255, 255, 255, 0.041);
+                margin-right: 5%;
+                border-radius: 15px;
+                box-shadow: 0px 10px 20px rgba(25, 1, 112, 0.541);
+            }
+            #AboutUs-box3{
+                width: 200px;
+                height: 90%;
+                background: rgba(255, 255, 255, 0.041);
+                margin-right: 5%;
+                border-radius: 15px;
+                box-shadow: 0px 10px 20px rgba(25, 1, 112, 0.541);
+            }
+            #AboutUs-box4{
+                width: 200px;
+                height: 90%;
+                background: rgba(255, 255, 255, 0.041);
+                border-radius: 15px;
+                box-shadow: 0px 10px 20px rgba(25, 1, 112, 0.541);
+            }
+            #AboutUs-FBox-Text{
+                color: white;
+                letter-spacing: 2px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                height: 30px;
+                width: 80%;
+                text-align: center;
+                border-bottom: 4px solid lime;
+                margin-left: 10%;
+            }
+            #AboutUs-FBox-Text-des{
+                margin-left: 10%;
+                margin-right: 10%;
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+                color: white;
+                letter-spacing: 1px;
+                word-spacing: 3px;
+            }
+            #footer{
+                height: 75px;
+                background: rgb(13, 0, 128);
+                font-family: Arial, Helvetica, sans-serif;
+                text-decoration: none;
+                color: white;
+                text-align: center;
+                padding-top: 20px;
+            }
+            #footerLinks{
+                text-decoration: none;
+                color: turquoise;
+                word-spacing: 50px;
+            }
+        </style>
+
+    </head>
+
+        <header id="header">
+            <div id="logo">
+                <img src="bag.png" id="header-img">
+                <p>GreenCrox Bags</p>
+            </div>
+
+            <nav id="nav-bar">
+                <a class="nav-link" href="#home">Home</a> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a class="nav-link" href="#services">Services</a>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                <a class="nav-link" href="#aboutus">About Us</a>
+            </nav>
+        </header>
+    
+    <body>
+        <section id="home">
+                <h1 id="motto">" Bring your dreams into unstopable journey "</h1>
+                    <form id="form" action="https://www.freecodecamp.com/email-submit">
+                        <input type="email" 
+                            id="email" 
+                            placeholder="Enter your email address here" 
+                            required>
+                        <br>
+                        <br>
+                        <input id="submit" 
+                            type="submit"
+                            value="Get Started"
+                            class="submit">
+                    </form>
+                     
+            <div id="storylayover">
+                <iframe 
+                    width="550" 
+                    height="330" 
+                    src="https://www.youtube.com/embed/SsHw-n2Y3OY" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+                <div id="video-description">
+                    <h1>It is not the destination, but the journey that inspires us</h1>
+                    <p>The proper packing of a  is a skill that takes time to perfect. Unless, of course, you've got access to a comprehensive list from a group of frequent fliers — say, Travel + Leisure's editors?
+
+                            <br><br>Regardless of whether you're packing a , , or wheeled bag, it's what's inside that counts, so we put together a list of absolute must-have travel items and some personal recommendations for the best in each</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="services">
+            <div id="services-upper">
+                <h1>SERVICES</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam nemo accusamus laborum repellat quos dolor dolorem, rerum fuga? Perspiciatis dolorum veniam nam eius laboriosam dolorem facere, laudantium corrupti vero sed.</p>
+            </div>
+            <div id="services-container">
+                <div id="box-1">
+                    <div id="box-1-top"></div>
+                    <div style="justify-content: center; display: flex; margin-top: 5%;">
+                        <img src="bag.png" style="width: 20%;">
+                    </div>
+                    <h3 style="text-align: center; font-size: 18px;color: rgb(13, 0, 128); font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Travelling Bag C801</h3>
+                    <div style="height: 5px; width: 75%; background: turquoise;margin-left: 12.5%;"></div>
+                    <div style="display: flex; width: 100%;padding-left: 12.5%;">
+                        <p style="color: lime; font-family: Arial, Helvetica, sans-serif"><strong>Price:</strong> $115</p>
+                   </div>
+                   <p style="color: rgb(13, 0, 128);margin-top: 0;font-family: Arial, Helvetica, sans-serif; padding-right: 12.5%; padding-left: 12.5%;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident totam fugiat ut aliquid est necessitatibus, ipsa debitis.</p>
+                   <button id="box-buttons" type="submit"><a href="#" style="text-decoration: none; color: white;">GET...</a></button>
+                </div>
+
+                <div id="box-2">
+                    <div id="box-2-top"></div>
+                    <div style="justify-content: center; display: flex; margin-top: 5%;">
+                        <img src="bag.png" style="width: 20%;">
+                    </div>
+                    <h3 style="text-align: center; font-size: 18px;color: rgb(13, 0, 128); font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Travelling Bag D4321</h3>
+                    <div style="height: 5px; width: 75%; background: turquoise;margin-left: 12.5%;"></div>
+                    <div style="display: flex; width: 100%;padding-left: 12.5%;">
+                        <p style="color: lime; font-family: Arial, Helvetica, sans-serif"><strong>Price:</strong> $203</p>
+                   </div>
+                   <p style="color: rgb(13, 0, 128);margin-top: 0;font-family: Arial, Helvetica, sans-serif; padding-right: 12.5%; padding-left: 12.5%;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident totam fugiat ut aliquid est necessitatibus, ipsa debitis.</p>
+                   <button id="box-buttons" type="submit"><a href="#" style="text-decoration: none; color: white;">GET...</a></button>    
+                </div>
+
+                <div id="box-3">
+                    <div id="box-3-top"></div>
+                    <div style="justify-content: center; display: flex; margin-top: 5%;">
+                        <img src="bag.png" style="width: 20%;">
+                    </div>
+                    <h3 style="text-align: center; font-size: 18px;color: rgb(13, 0, 128); font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Travelling Bag E2231</h3>
+                    <div style="height: 5px; width: 75%; background: turquoise;margin-left: 12.5%;"></div>
+                    <div style="display: flex; width: 100%;padding-left: 12.5%;">
+                        <p style="color: lime; font-family: Arial, Helvetica, sans-serif"><strong>Price:</strong> $325</p>
+                   </div>
+                   <p style="color: rgb(13, 0, 128);margin-top: 0;font-family: Arial, Helvetica, sans-serif; padding-right: 12.5%; padding-left: 12.5%;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident totam fugiat ut aliquid est necessitatibus, ipsa debitis.</p>
+                   <button id="box-buttons" type="submit"><a href="#" style="text-decoration: none; color: white;">GET...</a></button>                    
+                </div>
+
+                <button type="submit" id="seeMoreButton">MORE ITEMS HERE!!!</button>
+            </div>
+        </section>
+
+        <section id="aboutus">
+            <div id="about-us-container">
+                <div id="companyPic">
+                </div>
+
+                <div id="titleAboutus">
+                    <h1>ABOUT US</h1>
+                </div>
+
+                <div id="infoAboutus">
+                    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. </h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque magni quisquam veniam illum autem, inventore voluptatum hic quaerat ratione suscipit, quis, quod id quo aliquam reiciendis molestiae soluta? Quos, asperiores.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sint id nemo assumenda ipsum deleniti sapiente, illum eius delectus ducimus voluptas non asperiores, praesentium voluptates repellendus. Sequi veritatis tempore dolor!</p>
+                </div>
+                <div id="manPic">
+                    <img src="man.png">
+                </div>
+                <div id="aboutUsFlexBoxes">
+                    <div id="AboutUs-box1">
+                        <p id="AboutUs-FBox-Text">LOGO</p>
+                        <p id="AboutUs-FBox-Text-des">Lorem, ipsum dolor sit amet adipisicing elit. Itaque magni quisquam veniam illum autem.Itaque magni quisquam veniam illum autem. Bleedy </p>
+                    </div>
+                    <div id="AboutUs-box2">
+                        <p id="AboutUs-FBox-Text">LOGO</p>
+                        <p id="AboutUs-FBox-Text-des">Lorem, ipsum dolor sit amet adipisicing elit. Itaque magni quisquam veniam illum autem.Itaque magni quisquam veniam illum autem. Bleedy </p>
+                    </div>
+                    <div id="AboutUs-box3">
+                        <p id="AboutUs-FBox-Text">LOGO</p>
+                        <p id="AboutUs-FBox-Text-des">Lorem, ipsum dolor sit amet adipisicing elit. Itaque magni quisquam veniam illum autem.Itaque magni quisquam veniam illum autem. Bleedy </p>
+                    </div>
+                    <div id="AboutUs-box4">
+                        <p id="AboutUs-FBox-Text"> LOGO</p>
+                        <p id="AboutUs-FBox-Text-des">Lorem, ipsum dolor sit amet adipisicing elit. Itaque magni quisquam veniam illum autem.Itaque magni quisquam veniam illum autem. Bleedy </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </body>
+    <footer>
+        <div id="footer">
+            <div id="footerLinks">
+                <a href="#" id="footerLinks"><b>Terms</b></a>
+                <a href="#" id="footerLinks"><b>Privacy</b></a>
+                <a href="#" id="footerLinks"><b>Contact</b></a>
+            </div>
+            <p>Copyright 2016, Original Trombones</p>
+        </div>
+    </footer>
+</html>
